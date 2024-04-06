@@ -1,0 +1,120 @@
+.eb-garamond-<uniquifier> {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 1;
+  font-style: normal;
+}
+
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 8px 14px;
+}
+
+form input:focus {
+  border: none;
+  outline: none;
+}
+
+form label {
+  position: relative;
+  border: 1px solid navy;
+  border-radius: 5px;
+}
+
+form button {
+  background: #014e8d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 0px;
+  height: 32px;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+form button:hover {
+  background: #013763;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.above, .center {
+  position: absolute;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: white;
+  border-radius: 4px;
+  padding: 0 6px;
+  font-size: 0.8rem;
+}
+
+.above {
+  top: 0;
+  left: 24px;
+  border:  solid navy;
+  background: navy;
+  font-size: 0.7rem;
+}
+
+.center {
+  top: 50%;
+  left: 6px;
+  border: 1px solid transparent;
+  opacity: 0;
+}
+
+.invalid, .valid {
+  position: absolute;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: white;
+  border-radius: 4px;
+  padding: 0 6px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.invalid {
+  top: 0;
+  left: 230px;
+  border:  solid navy;
+  background: navy;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.valid {
+  opacity: 0;
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
