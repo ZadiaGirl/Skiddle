@@ -28,7 +28,7 @@
         
         perror_msg = "Invalid Password! ";
     
-        if(passvalObj.cap && passvalObj.low && passvalObj.num && passvalObj.len && passvalObj.spc) {
+        if(passeval_cap && passeval_low && passeval_num && passeval_len && passeval_spc) {
             return true;
         } else {
             if (!passvalObj.cap) {
