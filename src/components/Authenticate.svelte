@@ -13,14 +13,18 @@
     let cError: boolean = false;
     let perror_msg: string = "Invalid Password!\n";
 
-    let passvalObj = { cap: false, low: false, num: false, len: false, spc: false };
+    let passeval_cap: boolean = false;
+    let passeval_low: boolean = false;
+    let passeval_num: boolean = false;
+    let passeval_len: boolean = false;
+    let passeval_spc: boolean = false;
 
     function validatePass(){
-        passvalObj.cap = (/[A-Z]/.test(pass));
-        passvalObj.low = (/[a-z]/.test(pass));
-        passvalObj.num = (/[0-9]/.test(pass));
-        passvalObj.len = (pass.length >= min_pLen);
-        passvalObj.spc = (/[!@#$%\^&*(),.<>?\'\"{}]/.test(pass));
+        passeval_cap = (/[A-Z]/.test(pass));
+        passeval_low = (/[a-z]/.test(pass));
+        passeval_num = (/[0-9]/.test(pass));
+        passeval_len = (pass.length >= min_pLen);
+        passeval_spc = (/[!@#$%\^&*(),.<>?\'\"{}]/.test(pass));
         
         perror_msg = "Invalid Password! ";
     
@@ -99,13 +103,21 @@
         </label>
 
         <button type="button" on:click={login}>Submit</button>
-        {#if passvalObj.cap}
+        {#if passeval_cap}
         <p class = "emsg">Password must contain at least 1 uppercase letter!</p>
         {/if}
         
-        {#if passvalObj.num}
+        {#if passeval_num}
         <p class = "emsg">Password must contain at least 1 number!</p>
         {/if}
+
+		{#if passeval_len}
+        <p class = "emsg">Password must be at least {min_pLen} characters long!</p>
+		{/if}
+
+		{#if passeval_spc}
+        <p class = "emsg">Password must contain at least 1 special character!</p>
+		{/if}
     </form>
 </div>
 
