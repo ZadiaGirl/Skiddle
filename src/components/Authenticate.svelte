@@ -31,7 +31,7 @@
         if(passeval_cap && passeval_low && passeval_num && passeval_len && passeval_spc) {
             return true;
         } else {
-            if (!passvalObj.cap) {
+            if (!passeval_cap) {
                 perror_msg += '\nPassword must contain at least 1 uppercase letter!';
             }
 
