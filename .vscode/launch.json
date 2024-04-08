@@ -1,36 +1,36 @@
 {
   "version": "0.2.0",
   "configurations": [
-    {
-      "name": "localhost (Edge)",
-      "type": "edge",
-      "request": "launch",
-      "url": "http://localhost:5173/",
-      "webRoot": "${workspaceFolder}\\public"
-    },
-    {
-      "name": "localhost (Chrome)",
-      "type": "chrome",
-      "request": "launch",
-      "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}\\public"
-    },
-    {
-      "name": "Launch Skiddle",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/src",
-      "program": "${workspaceFolder}/src",
-      "stopOnEntry": true
-    }
+	{
+	  "name": "localhost (Edge)",
+	  "type": "edge",
+	  "request": "launch",
+	  "url": "http://localhost:5173/",
+	  "webRoot": "${workspaceFolder}\\public"
+	},
+	{
+	  "name": "localhost (Chrome)",
+	  "type": "chrome",
+	  "request": "launch",
+	  "url": "http://localhost:5173",
+	  "webRoot": "${workspaceFolder}\\public"
+	},
+	{
+	  "name": "Launch Skiddle",
+	  "type": "node",
+	  "request": "launch",
+	  "cwd": "${workspaceFolder}/src",
+	  "program": "${workspaceFolder}/src",
+	  "stopOnEntry": true
+	}
   ],
   "compounds": [
-    {
-      "name": "Launch Node and Browser",
-      "configurations": [
-        "Launch Skiddle",
-        "localhost (Edge)"
-      ]
-    }
+	{
+	  "name": "Launch Node and Browser",
+	  "configurations": [
+		"Launch Skiddle",
+		"localhost (Edge)"
+	  ]
+	}
   ]
 }
